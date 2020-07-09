@@ -1,17 +1,14 @@
 using JpJamsBot.Models;
-using Microsoft.Extensions.Options;
 
 namespace JpJamsBot.Business
 {
     public class JamsService : IJamsService
     {
-        private readonly AzureSettings _settings;
+        private AzureSettings _settings = new AzureSettings();
 
-        public JamsService(IOptions<AzureSettings> settings)
+        public void SetSettings(AzureSettings settings)
         {
-            _settings = settings?.Value;
+            _settings = settings;
         }
-
-        
     }
 }
