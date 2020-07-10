@@ -1,8 +1,6 @@
-using JpJamsBot.Interfaces;
-
-namespace JpJamsBot.Models
+namespace JpJamsBot.Interfaces
 {
-    public class AzureSettings : IAzureSettings
+    public interface IAzureSettings
     {
         public string CosmosEndpointUrl { get; set; }
 

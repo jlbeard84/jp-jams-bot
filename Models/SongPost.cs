@@ -13,10 +13,8 @@ namespace JpJamsBot.Models
 
         public string Song { get; set; }
 
-        public string YoutubeLink { get; set; }
-
-        public string SpotifyLink { get; set; }
-
+        public string Link { get; set; }
+        
         public DateTime? TwitterDate { get; set; }
 
         public override string ToString()

@@ -1,14 +1,15 @@
+using JpJamsBot.Base;
 using JpJamsBot.Models;
+using Microsoft.Azure.Cosmos;
 
 namespace JpJamsBot.Business
 {
-    public class JamsService : IJamsService
+    public class JamsService : ServiceBase, IJamsService
     {
-        private AzureSettings _settings = new AzureSettings();
-
-        public void SetSettings(AzureSettings settings)
-        {
-            _settings = settings;
-        }
+        public JamsService(
+            CosmosClient cosmosClient,
+            AzureSettings settings)
+            : base(cosmosClient, settings)
+        { }
     }
 }
